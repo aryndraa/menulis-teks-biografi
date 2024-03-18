@@ -1,0 +1,2077 @@
+:root {
+  /* color */
+  --bg-color: #f7f7ff;
+  --link-color: #cc2936;
+  --primary-color: #b20000;
+  --secondary-color: #160c28;
+
+  /* font */
+  --poppins-font: "Poppins", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+  --bebas-font: "Bebas Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.prim-span {
+  color: var(--primary-color);
+}
+
+.point {
+  border-bottom: solid 2px var(--primary-color);
+  position: relative;
+}
+
+.point::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  bottom: -5px;
+  right: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+body {
+  font-family: var(--poppins-font);
+  color: #160c28;
+}
+
+body:not(.footer) {
+  background-color: var(--bg-color);
+  margin-left: 189px;
+}
+
+/* sidebar start */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background: var(--secondary-color);
+  box-shadow: 5px 0px 5px #000;
+}
+
+.sidebar .content-side {
+  padding: 20px 0px;
+  color: var(--bg-color);
+  font-family: var(--montserrat-font);
+}
+
+.sidebar .content-side .side-header {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  padding-bottom: 18px;
+  border-bottom: solid 2px var(--primary-color);
+}
+
+.sidebar .content-side .side-header h1 {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.sidebar .content-side .side-link {
+  margin-top: 30px;
+}
+
+.sidebar .content-side .side-link li {
+  display: flex;
+  align-items: center;
+  margin: 30px 10px;
+  padding: 12px 18px;
+  transition: 400ms ease;
+  border-bottom: transparent 1px solid;
+}
+
+.sidebar .content-side .side-link li.active {
+  background: var(--secondary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+  border: solid 1px var(--primary-color);
+}
+
+.sidebar .content-side .side-link li a {
+  color: var(--bg-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: 400ms ease;
+  text-decoration: none;
+}
+
+.sidebar
+  .content-side
+  .side-link
+  li:hover
+  a:not(.sidebar .content-side .side-link li.active a) {
+  color: var(--primary-color);
+}
+
+.sidebar
+  .content-side
+  .side-link
+  li:hover:not(.sidebar .content-side .side-link li.active) {
+  border-bottom: solid 1px var(--primary-color);
+}
+/* sidebar end */
+
+/* HOME PAGE START */
+/* hero start */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("assets/home/hero.jpg");
+  background-size: 400px;
+  margin: 0 30px;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-content {
+  background: #ffffffd0;
+  backdrop-filter: blur(20px);
+  max-width: 921px;
+  padding: 30px;
+  box-shadow: -15px 15px 10px #00000023;
+}
+
+.hero .hero-content .hero-header {
+  margin-bottom: 40px;
+}
+
+.hero .hero-content .hero-header h1 {
+  font-family: var(--bebas-font);
+  font-size: 3.75rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.hero .hero-content .hero-header p {
+  font-family: var(--poppins-font);
+  font-size: 1.2rem;
+}
+
+.hero .hero-content .hero-link h2 {
+  font-family: var(--bebas-font);
+  font-size: 3.25rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+
+.hero .hero-content .hero-link p {
+  display: flex;
+  background-color: var(--primary-color);
+  padding: 18px;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  font-family: var(--poppins-font);
+  text-decoration: none;
+  transition: 400ms ease-in-out;
+}
+
+/* hero start */
+
+/* daftar materi start */
+.materi,
+.biografi,
+.group,
+.faq,
+.definisi,
+.tujuan,
+.ciri,
+.manfaat,
+.kebahasaan,
+.sturktur,
+.contoh,
+.story,
+.rangkuman {
+  padding: 3.5rem 5%;
+}
+
+.materi h2,
+.biografi h2,
+.group h2 {
+  font-family: var(--bebas-font);
+  font-size: 3.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+.materi .list-materi {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.materi .list-materi .card {
+  background-color: #fff;
+  min-width: 420px;
+  padding: 20px 15px;
+  box-shadow: 0 0 5px #00000020;
+  position: relative;
+  margin: 25px;
+  transition: 400ms;
+  border: solid 1px transparent;
+}
+
+.materi .list-materi .card:hover {
+  transform: scale(1.03);
+  border: solid 1px var(--link-color);
+}
+
+.no-card {
+  position: absolute;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 50%;
+  top: -15%;
+  left: -4%;
+  background-color: var(--primary-color);
+  transition: 800ms ease-in-out;
+}
+
+.materi .list-materi .card:hover .no-card {
+  left: 96%;
+  background-color: var(--link-color);
+}
+
+.materi .list-materi .card .card-title {
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.materi .list-materi .card .card-link {
+  margin-top: 18px;
+}
+
+.materi .list-materi .card .card-link a {
+  font-family: var(--poppins-font);
+  margin-top: 80px;
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  color: #fff;
+}
+/* daftar materi end */
+
+/* profil biograpi start */
+.biografi {
+  background-image: url("assets/home/dan-cristian-padure-zm1oNbYS7DY-unsplash\ 1.png");
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.biografi .container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-top: 40px;
+  padding: 30px;
+  padding-right: 0;
+  max-width: 920px;
+  min-height: 420px;
+  background-image: url("assets/home/Ellipse\ 6\ \(1\).png");
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 50%;
+  box-shadow: -10px 10px 10px #00000020;
+  /* background-position: center; */
+}
+
+.biografi .container .profil .name {
+  font-size: 2.3rem;
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  border-bottom: solid 2px var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 28px;
+}
+
+.biografi .container .profil .bio {
+  font-size: 1rem;
+  font-family: var(--poppins-font);
+}
+
+.biografi .container .profil .bio p {
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+.biografi .container .profil .profil-link {
+  margin-top: 30px;
+}
+
+.biografi .container .profil .profil-link a {
+  background: var(--primary-color);
+  padding: 5px 18px;
+  color: #fff;
+}
+
+.biografi .container .img {
+  max-width: 250px;
+  min-width: 250px;
+  display: flex;
+  transform: translateX(35%);
+  align-items: center;
+}
+
+.biografi .container .img img {
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 400ms ease;
+}
+
+.biografi .container .img img.active {
+  opacity: 1;
+}
+
+.biografi .container .img img#logo {
+  transform: translateX(-100%);
+}
+
+/* profil biograpi end */
+
+/* faq start */
+.faq {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+.faq .faq-container .faq-wrap {
+  display: flex;
+  background-color: #fff;
+  padding: 20px 15px;
+  box-shadow: 0 0 5px #00000020;
+}
+
+.faq .faq-container .faq-wrap .faq-content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--montserrat-font);
+  margin-bottom: 8px;
+}
+
+.faq .faq-container .faq-wrap .faq-content p {
+  font-size: 1.4rem;
+}
+
+.faq .faq-container .faq-wrap .faq-content h4 {
+  margin-top: 40px;
+  font-size: 2rem;
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  border-bottom: solid 2px var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.faq .faq-container .faq-wrap .faq-content button {
+  background-color: var(--primary-color);
+  margin-top: 18px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+}
+
+.faq .faq-container .faq-wrap .faq-content button:active {
+  background-color: var(--link-color);
+}
+
+.faq .faq-container .faq-wrap .ilust {
+  width: 350px;
+  margin: 0px 40px;
+}
+
+.faq .faq-container .faq-wrap .ilust img {
+  width: 100%;
+}
+
+.faq .faq-container .faq-form {
+  display: none;
+  padding: 15px;
+  justify-content: space-between;
+  padding-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 5px #00000020;
+}
+
+.faq .faq-container .faq-form.active {
+  display: flex;
+  animation: faq 400ms ease forwards;
+}
+
+@keyframes faq {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.faq .faq-container .faq-form input#nama {
+  width: 650px;
+  height: 50px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  border: solid 2px transparent;
+  transition: 400ms ease;
+}
+
+.faq .faq-container .faq-form input#email {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 16px;
+  border: none;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  border: solid 2px transparent;
+  transition: 400ms ease;
+}
+
+.faq .faq-container .faq-form #pesan {
+  min-width: 650px;
+  max-width: 650px;
+  border: none;
+  min-height: 120px;
+  max-height: 120px;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  border: solid 2px transparent;
+  transition: 400ms ease;
+}
+
+.faq .faq-container .faq-form input#nama:focus,
+.faq .faq-container .faq-form input#email:focus,
+.faq .faq-container .faq-form #pesan:focus {
+  outline: none;
+  border: solid 2px var(--primary-color);
+}
+
+.faq .faq-container .faq-form input[type="submit"] {
+  padding: 15px 120px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.faq .faq-container .faq-form input[type="submit"]:hover {
+  background-color: var(--link-color);
+}
+
+.faq .faq-container .faq-form .ilust {
+  display: flex;
+  min-width: 280px;
+  bottom: 0;
+}
+.faq .faq-container .faq-form .ilust img {
+  width: 100%;
+}
+
+.faq .faq-container .faq-notif {
+  margin-top: 22px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 8px 10px #00000026;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq .faq-container .faq-notif.active {
+  animation: notif 400ms ease forwards;
+  display: flex;
+}
+
+@keyframes notif {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.faq .faq-container .faq-notif .send-succes {
+  display: none;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.2rem;
+  animation: succes 400ms ease forwards;
+}
+
+@keyframes succes {
+  0% {
+    color: #fff;
+    opacity: 0;
+  }
+  100% {
+    color: #00ff51;
+    opacity: 1;
+  }
+}
+
+.faq .faq-container .faq-notif .send-failed {
+  display: none;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.2rem;
+  animation: fail 400ms ease forwards;
+}
+
+@keyframes fail {
+  0% {
+    color: #fff;
+    opacity: 0;
+  }
+  100% {
+    color: var(--primary-color);
+    opacity: 1;
+  }
+}
+
+.faq .faq-container .faq-notif .send-succes.active,
+.faq .faq-container .faq-notif .send-failed.active {
+  display: flex;
+}
+/* faq end */
+/* HOME PAGE END */
+
+/* MATTERI PAGE START */
+/* definisi start */
+.definisi {
+  min-height: 100vh;
+  background-image: url("assets/materi/Group\ 73.png");
+  background-repeat: no-repeat;
+  background-size: 160px;
+  background-position-x: 90%;
+  /* background-position: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.definisi .container .title h1,
+.tujuan h1,
+.ciri h1,
+.manfaat h1,
+.kebahasaan h1,
+.sturktur h1,
+.contoh h1,
+.rangkuman h1 {
+  font-family: var(--bebas-font);
+  font-size: 3.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.definisi .container .title p {
+  font-size: 1.2rem;
+}
+
+.definisi .container .wrap {
+  margin-top: 2rem;
+}
+
+.definisi .container .wrap .note {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  color: #fff;
+}
+
+.definisi .container .wrap .note h2 {
+  font-family: var(--montserrat-font);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.definisi .container .wrap .note p {
+  font-size: 1.2rem;
+}
+
+.definisi .container .wrap .note a {
+  color: var(--primary-color);
+}
+
+.definisi .container .wrap .content {
+  margin-top: 2rem;
+}
+
+.definisi .container .wrap .content h2 {
+  font-family: var(--montserrat-font);
+
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.definisi .container .wrap .content p {
+  font-size: 1.2rem;
+}
+
+.definisi .img {
+  min-width: 380px;
+}
+
+.definisi .img img {
+  width: 100%;
+}
+/* definisi end */
+
+/* tujuan start */
+.tujuan .container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.tujuan .container .list-tujuan li {
+  margin: 1.8rem 0;
+}
+
+.tujuan .container .list-tujuan li h2 {
+  font-family: var(--montserrat-font);
+
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.tujuan .container .list-tujuan li p {
+  font-size: 1.2rem;
+}
+
+.tujuan .container .img {
+  min-width: 320px;
+}
+
+.tujuan .container .img img {
+  width: 100%;
+}
+/* tujuan end */
+
+/* ciri start */
+.ciri {
+  background-image: url("assets/materi/mikolaj-DCzpr09cTXY-unsplash\ 1.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 1000px;
+}
+
+.ciri .list-ciri {
+  margin-top: 2rem;
+  display: flex;
+  gap: 50px;
+}
+
+.ciri .list-ciri li {
+  background-color: #fff;
+  padding: 28px 20px;
+  width: 16rem;
+  box-shadow: 0 0 10px #00000020;
+}
+
+.ciri .list-ciri h2 {
+  background-color: var(--primary-color);
+  font-family: var(--montserrat-font);
+  display: inline;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 50%;
+}
+
+.ciri .list-ciri p {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+/* ciri end */
+
+/* manfaat start */
+.accordion-item {
+  margin: 1rem 0;
+}
+.accordion-header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 2rem;
+  padding: 18px;
+  cursor: pointer;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 18px;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 10px #00000020;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.accordion-content.active {
+  display: block;
+  animation: accor 400ms ease backwards;
+}
+
+@keyframes accor {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* manfaat end */
+
+/* kebahsaan start */
+.kebahasaan .list-kebahasaan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 30px;
+}
+
+.kebahasaan .list-kebahasaan li {
+  background-color: var(--secondary-color);
+  width: 25rem;
+  padding: 20px;
+  color: #fff;
+}
+
+.kebahasaan .list-kebahasaan li h3 {
+  font-family: var(--montserrat-font);
+  font-size: 2rem;
+  font-weight: 500;
+  border-bottom: solid 2px var(--primary-color);
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+/* kebahsaan end */
+
+/* struktu start*/
+.sturktur {
+  background-image: url("assets/materi/max-saeling-_CGxNOLM1gQ-unsplash\ 1.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-position-x: 10%;
+}
+
+.sturktur .wrapper {
+  margin-top: 5rem;
+  margin-left: 8rem;
+  padding: 1.2rem;
+  background-color: #ffffff;
+  box-shadow: -15px 15px 10px #00000053;
+}
+
+.sturktur .wrapper li {
+  margin: 30px;
+}
+
+.sturktur .wrapper li h2 {
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+  font-size: 2rem;
+  border-bottom: solid 2px var(--primary-color);
+  padding-bottom: 5px;
+  margin-bottom: 0.8rem;
+}
+
+.sturktur .wrapper li p {
+  font-size: 1.2rem;
+}
+
+/* struktu end*/
+
+/* contoh start */
+.contoh {
+  margin-bottom: 8rem;
+}
+.contoh p {
+  font-size: 1.5rem;
+}
+
+.contoh .biografi-link {
+  margin-top: 2rem;
+}
+
+.contoh .biografi-link a {
+  background-color: var(--primary-color);
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.contoh .biografi-link a:hover {
+  background-color: var(--link-color);
+}
+/* contoh end */
+/* MATTERI PAGE END */
+
+/* BIOGRAFI PAGE START */
+/* hero start */
+.hero-biografi {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("assets/biografi/img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+}
+
+.hero-biografi .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-biografi .wrapper .img {
+  min-width: 350px;
+}
+
+.hero-biografi .wrapper .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.hero-biografi .wrapper .title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero-biografi .wrapper .title h1 {
+  font-size: 3.8rem;
+  font-family: var(--bebas-font);
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+
+.hero-biografi .wrapper .title h2 {
+  font-size: 3.2rem;
+  font-family: var(--bebas-font);
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-biografi .wrapper .title h2::after {
+  content: "";
+  display: block;
+  padding-bottom: 3px;
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(1.5);
+}
+
+.hero-biografi .wrapper .title p {
+  font-size: 1.8rem;
+  font-family: var(--montserrat-font);
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+}
+/* hero end */
+
+/* story start */
+
+.story .container p {
+  padding-bottom: 1.8rem;
+  font-size: 1.2rem;
+}
+/* story end */
+
+/* rangkuman start */
+.rangkuman .pendiidikan {
+  padding-bottom: 5rem;
+}
+.rangkuman .pendiidikan .list-rangkum li {
+  margin: 2rem 0;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body {
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 10px 10px #00000020;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-date {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-content {
+  display: flex;
+  margin-top: 1.8rem;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-content .info h2 {
+  font-size: 2rem;
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-content .info h3 {
+  font-size: 1.5rem;
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-content .picture {
+  min-width: 20rem;
+  max-width: 20rem;
+  margin-left: 20px;
+}
+
+.rangkuman .pendiidikan .list-rangkum li .card-body .card-content .picture img {
+  width: 100%;
+}
+
+.rangkuman .list-kerja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rangkuman .list-kerja li {
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #00000020;
+  background-color: #fff;
+}
+
+.rangkuman .list-kerja h2 {
+  font-size: 1.8rem;
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+}
+
+.rangkuman .list-kerja h3 {
+  font-size: 1.5rem;
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+}
+
+/* rangkuman end */
+/* BIOGRAFI PAGE END */
+
+/* footer start */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  bottom: 0;
+  /* align-items: center; */
+  background-color: #2f2f2f;
+  overflow-y: hidden;
+}
+
+.footer .footer-content .footer-link li {
+  color: #fff;
+  margin: 25px 0px;
+}
+
+.footer .footer-content .footer-link a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer .footer-content p {
+  padding-top: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer .footer-end {
+  color: #fff;
+}
+
+.footer .footer-end li {
+  margin: 20px 0px;
+}
+/* footer end */
+
+/* responsif */
+
+/* tablet */
+@media screen and (max-width: 1024px) and (min-width: 720px) {
+  /* homepage start */
+  /* hero start */
+  .hero {
+    min-height: 75vh;
+    background-size: 400px;
+    margin: 0 0px;
+    background-position-x: 25rem;
+    align-items: baseline;
+  }
+
+  .hero .hero-content {
+    margin-top: 5rem;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    box-shadow: none;
+    max-width: 931px;
+    padding: 20px;
+  }
+
+  .hero .hero-content .hero-header {
+    margin-bottom: 2rem;
+    padding: 30px 20px;
+    background-color: #fffffff5;
+    backdrop-filter: blur(20px);
+    box-shadow: -5px 5px 10px #00000025;
+  }
+
+  .hero .hero-content .hero-header h1 {
+    font-size: 3rem;
+  }
+
+  .hero .hero-content .hero-header p {
+    font-size: 1rem;
+  }
+
+  .hero .hero-content .hero-link {
+    background-color: #fffffff5;
+    backdrop-filter: blur(20px);
+
+    box-shadow: -5px 5px 10px #00000025;
+    padding: 30px 20px;
+  }
+
+  .hero .hero-content .hero-link h2 {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+  }
+
+  .hero .hero-content .hero-link p {
+    padding: 0.8rem;
+  }
+  /* hero end */
+
+  /* daftar materi start */
+  .materi h2,
+  .biografi h2,
+  .group h2 {
+    font-size: 3rem;
+  }
+
+  .materi .list-materi {
+    margin-top: 1.2rem;
+    justify-content: center;
+  }
+
+  .materi .list-materi .card {
+    background-color: #fff;
+    min-width: 100%;
+    padding: 1.4rem;
+    box-shadow: 0 0 5px #00000020;
+    position: relative;
+    margin: 0.8rem;
+  }
+
+  .materi .list-materi .card .card-title {
+    font-size: 1.3rem;
+  }
+
+  .materi .list-materi .card .card-link {
+    margin-top: 8px;
+  }
+
+  .materi .list-materi .card .card-link a {
+    padding: 3px 7px;
+    font-size: 0.8rem;
+  }
+  /* daftar materi end */
+
+  /* profil biografi start */
+  .biografi .container {
+    flex-wrap: wrap-reverse;
+    margin-top: 2rem;
+    padding: 2rem;
+    padding-right: 0;
+    max-width: auto;
+    min-height: auto;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 300px;
+    box-shadow: -10px 10px 10px #00000020;
+    justify-content: center;
+  }
+
+  .biografi .container .profil .name {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .biografi .container .profil .bio p {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .biografi .container .img {
+    margin-bottom: 2rem;
+    min-width: 240px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    transform: translateX(0%);
+  }
+  /* profil biografi end */
+
+  /* group start */
+  .group p {
+    font-family: var(--montserrat-font);
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .group .list-group .card-member {
+    margin: 15px;
+    width: 14rem;
+    height: 20rem;
+  }
+
+  .group .list-group .card-member .img img {
+    position: relative;
+    width: 130px;
+    border-radius: 50%;
+  }
+
+  .group .list-group .card-member .card-content {
+    margin-top: 30px;
+    font-family: var(--montserrat-font);
+    padding: 0px 1.2rem;
+  }
+
+  .group .list-group .card-member .card-content strong {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+
+  .group .list-group .card-member .card-content h3 {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .group .list-group .card-member .card-sosmed {
+    border: solid 2px var(--primary-color);
+  }
+  /* group end*/
+
+  /* faq start */
+  .faq .faq-container .faq-wrap {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  .faq .faq-container .faq-wrap .ilust {
+    width: 250px;
+    margin: 0px 0px;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--montserrat-font);
+    margin-bottom: 0.2rem;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content p {
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content h4 {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    font-family: var(--montserrat-font);
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content button {
+    background-color: var(--primary-color);
+    margin-top: 18px;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form {
+    display: none;
+    padding: 18px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .faq .faq-container .faq-form input#nama {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form input#email {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form #pesan {
+    min-width: 100%;
+    max-width: 650px;
+    border: none;
+    min-height: 120px;
+    max-height: 120px;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form .ilust {
+    display: flex;
+    min-width: 300px;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .faq .faq-container .faq-notif .send-succes {
+    font-size: 1rem;
+  }
+  /* faq end */
+  /* homepage end */
+
+  /* materi page start */
+  /* definisi start */
+  .definisi {
+    gap: 0px;
+    background-image: none;
+    min-height: 75vh;
+  }
+
+  .definisi .img {
+    display: none;
+  }
+
+  /* definisi start */
+
+  /* tujuan start */
+  .tujuan .container .img {
+    display: none;
+  }
+
+  .tujuan h1 {
+    margin-bottom: 0;
+  }
+
+  .tujuan .container .list-tujuan li {
+    margin-top: 0;
+  }
+
+  /* tujuan end */
+
+  /* ciri start */
+  .ciri .list-ciri {
+    margin-top: 2.5rem;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ciri .list-ciri li {
+    background-color: #fff;
+    padding: 28px 20px;
+    width: 15.5rem;
+    box-shadow: 0 0 10px #00000020;
+  }
+
+  .ciri .list-ciri h2 {
+    font-size: 1.8rem;
+    padding: 9px 20px;
+  }
+  /* ciri end */
+
+  /* mamfaat start */
+  .accordion-header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 18px;
+    cursor: pointer;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+  /* mamfaat end */
+
+  /* kebahsaaan start */
+  .kebahasaan .list-kebahasaan li {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+  }
+  /* kebahsaaan end */
+
+  /* struktur start  */
+  .sturktur .wrapper {
+    margin-top: 5rem;
+    margin-left: 1.8rem;
+  }
+  /* struktur end */
+
+  /* materi page end */
+
+  /* biografi page start */
+  /* hero */
+  .hero-biografi {
+    min-height: 62vh;
+    background-size: 100% 35%;
+  }
+
+  .hero-biografi .wrapper .img {
+    min-width: 18rem;
+    margin-top: 1rem;
+  }
+
+  .hero-biografi .wrapper .title {
+    margin-top: 1rem;
+  }
+
+  .hero-biografi .wrapper .title h2 {
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+  }
+
+  .hero-biografi .wrapper .title h2::after {
+    content: "";
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: solid 2px var(--primary-color);
+    transform: scaleX(1);
+  }
+
+  .hero-biografi .wrapper .title p {
+    font-size: 1.5rem;
+    font-family: var(--montserrat-font);
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  /* hero */
+
+  /* story start */
+  .story {
+    padding-top: 0rem;
+  }
+  /* story end */
+
+  /* rangkuman start */
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content .picture {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0.8rem;
+  }
+
+  .rangkuman .list-kerja li {
+    width: 100%;
+  }
+  /* rangkuman end */
+  /* biografi page end */
+
+  .footer {
+    padding: 10px 30px;
+  }
+}
+
+/* handphone */
+@media (max-width: 720px) {
+  body:not(.footer) {
+    background-color: var(--bg-color);
+    margin-left: 60px;
+  }
+  /* sidebar start */
+  .sidebar .content-side .side-header {
+    justify-content: center;
+  }
+
+  .sidebar .content-side .side-header h1 {
+    display: none;
+  }
+
+  .sidebar
+    .content-side
+    .side-link
+    li
+    a:not(.sidebar .content-side .side-link li a.link-icon) {
+    display: none;
+  }
+
+  .sidebar .content-side .side-link li {
+    margin: 20px 0px;
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .sidebar .content-side .side-link li.active {
+    background: var(--secondary-color);
+    box-shadow: none;
+    border: none;
+  }
+
+  .sidebar .content-side .side-link li a.link-icon {
+    padding: 10px;
+  }
+
+  .sidebar .content-side .side-link li.active a.link-icon {
+    border: solid 1px var(--primary-color);
+  }
+
+  .sidebar
+    .content-side
+    .side-link
+    li:hover:not(.sidebar .content-side .side-link li.active) {
+    border-bottom: none;
+  }
+  /* sidebar end */
+  /* homepage start */
+  /* hero start */
+  .hero {
+    min-height: 80vh;
+    background-size: 380px;
+    margin: 0 0px;
+    background-position-x: 10rem;
+    align-items: baseline;
+  }
+
+  .hero .hero-content {
+    margin-top: 2rem;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    box-shadow: none;
+    max-width: 931px;
+    padding: 20px;
+  }
+
+  .hero .hero-content .hero-header {
+    margin-bottom: 0.8rem;
+    padding: 30px 12px;
+    background-color: #fffffff5;
+    backdrop-filter: blur(20px);
+    box-shadow: -5px 5px 10px #00000025;
+  }
+
+  .hero .hero-content .hero-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .hero .hero-content .hero-header p {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .hero .hero-content .hero-link {
+    background-color: #fffffff5;
+    backdrop-filter: blur(20px);
+    box-shadow: -5px 5px 10px #00000025;
+    padding: 10px 12px;
+  }
+
+  .hero .hero-content .hero-link h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    letter-spacing: 0.1rem;
+  }
+
+  .hero .hero-content .hero-link p {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  /* hero end */
+
+  /* daftar materi start */
+
+  .materi,
+  .biografi,
+  .group,
+  .faq,
+  .definisi,
+  .tujuan,
+  .ciri,
+  .manfaat,
+  .kebahasaan,
+  .sturktur,
+  .contoh,
+  .story,
+  .rangkuman {
+    padding: 2rem 6%;
+  }
+
+  .materi h2,
+  .biografi h2,
+  .group h2 {
+    font-size: 1.5rem;
+  }
+
+  .materi .list-materi {
+    margin-top: 1.2rem;
+    justify-content: center;
+  }
+
+  .materi .list-materi .card {
+    background-color: #fff;
+    padding: 10px;
+    min-width: 90%;
+    box-shadow: 0 0 5px #00000020;
+    position: relative;
+    margin: 0.3rem;
+  }
+
+  .materi .list-materi .card .card-title {
+    font-size: 1rem;
+  }
+
+  .no-card {
+    font-size: 0.8rem;
+    padding: 0px 6.5px;
+  }
+
+  .materi .list-materi .card .card-link {
+    margin-top: 5px;
+  }
+  .materi .list-materi .card .card-link a {
+    font-family: var(--poppins-font);
+    background-color: var(--primary-color);
+    padding: 1px 4px;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  /* daftar materi end */
+
+  /* profil biografi start */
+  .biografi .container {
+    flex-wrap: wrap-reverse;
+    margin-top: 2rem;
+    padding: 1.8rem;
+    max-width: auto;
+    min-height: auto;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 280px;
+    box-shadow: -10px 10px 10px #00000020;
+    justify-content: center;
+  }
+
+  .biografi .container .profil .name {
+    font-size: 1.5rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .biografi .container .profil .bio p {
+    margin: 8px 0;
+    font-size: 0.8rem;
+  }
+
+  .biografi .container .profil .profil-link {
+    margin-top: 20px;
+  }
+
+  .biografi .container .profil .profil-link a {
+    background: var(--primary-color);
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .biografi .container .img {
+    margin-bottom: 2rem;
+    max-width: 190px;
+    min-width: 190px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    transform: translateX(0%);
+  }
+  /* profil biografi end */
+
+  /* faq start */
+  .faq .faq-container .faq-wrap {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .faq .faq-container .faq-wrap .ilust {
+    width: 180px;
+    margin: 0px 0px;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--montserrat-font);
+    margin-bottom: 0.2rem;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content p {
+    font-size: 0.8rem;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content h4 {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    font-family: var(--montserrat-font);
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content button {
+    background-color: var(--primary-color);
+    margin-top: 18px;
+    font-size: 0.8rem;
+  }
+
+  .faq .faq-container .faq-form {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 10px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .faq .faq-container .faq-form input#nama {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form input#email {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-form #pesan {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 120px;
+    max-height: 120px;
+    font-size: 1rem;
+  }
+
+  .faq .faq-container .faq-wrap .faq-content button {
+    background-color: var(--primary-color);
+    margin-top: 18px;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+    border: none;
+    color: #fff;
+  }
+
+  .faq .faq-container .faq-form input[type="submit"] {
+    padding: 15px 80px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .faq .faq-container .faq-form .ilust {
+    display: flex;
+    min-width: 110px;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .faq .faq-container .faq-notif .send-succes {
+    font-size: 1rem;
+  }
+  /* faq end */
+  /* homepage end */
+
+  /*  materi page start  */
+  /* definisi start */
+  .definisi {
+    gap: 0px;
+    background-image: none;
+    min-height: 75vh;
+  }
+
+  .definisi .img {
+    display: none;
+  }
+
+  .definisi .container .title h1,
+  .tujuan h1,
+  .ciri h1,
+  .manfaat h1,
+  .kebahasaan h1,
+  .sturktur h1,
+  .contoh h1,
+  .rangkuman h1 {
+    font-family: var(--bebas-font);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .definisi .container .title p {
+    font-size: 0.8rem;
+  }
+
+  .definisi .container .wrap {
+    margin-top: 1rem;
+  }
+
+  .definisi .container .wrap .note {
+    padding: 10px;
+  }
+
+  .definisi .container .wrap .note h2 {
+    font-family: var(--montserrat-font);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .definisi .container .wrap .note p {
+    font-size: 0.8rem;
+  }
+
+  .definisi .container .wrap .content {
+    margin-top: 1rem;
+  }
+
+  .definisi .container .wrap .content h2 {
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .definisi .container .wrap .content p {
+    font-size: 0.8rem;
+  }
+  /* definisi start */
+
+  /* tujuan start */
+  .tujuan .container .img {
+    display: none;
+  }
+
+  .tujuan h1 {
+    margin-bottom: 0;
+  }
+
+  .tujuan .container .list-tujuan li {
+    margin: 0.5rem 0;
+    margin-top: 0;
+  }
+
+  .tujuan .container .list-tujuan li h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .tujuan .container .list-tujuan li p {
+    font-size: 0.8rem;
+  }
+  /* tujuan end */
+
+  /* ciri start */
+  .ciri {
+    background-image: none;
+  }
+  .ciri .list-ciri {
+    margin-top: 1.8rem;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ciri .list-ciri li {
+    background-color: #fff;
+    padding: 28px 18px;
+    width: 100%;
+    box-shadow: 0 0 10px #00000020;
+  }
+
+  .ciri .list-ciri h2 {
+    font-size: 1rem;
+    padding: 9px 15px;
+  }
+
+  .ciri .list-ciri p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  /* ciri end */
+
+  /* mamfaat start */
+  .accordion-item {
+    margin: 0.5rem 0;
+  }
+
+  .accordion-header {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    padding: 10px 15px;
+  }
+
+  .accordion-content {
+    font-size: 0.8rem;
+  }
+  /* mamfaat end */
+
+  /* kebahsaaan start */
+  .kebahasaan .list-kebahasaan {
+    gap: 15px;
+  }
+  .kebahasaan .list-kebahasaan li {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 20px 15px;
+    color: #fff;
+  }
+
+  .kebahasaan .list-kebahasaan li h3 {
+    font-family: var(--montserrat-font);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .kebahasaan .list-kebahasaan li p {
+    font-size: 0.8rem;
+  }
+  /* kebahsaaan end */
+
+  /* struktur start  */
+  .sturktur {
+    background-image: none;
+  }
+  .sturktur .wrapper {
+    margin-top: 5rem;
+    margin-left: 1.8rem;
+  }
+
+  .sturktur .wrapper {
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .sturktur .wrapper li {
+    margin: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .sturktur .wrapper li h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-bottom: 0px;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .sturktur .wrapper li p {
+    font-size: 0.8rem;
+  }
+  /* struktur end */
+
+  /* contoh start */
+  .contoh p {
+    font-size: 0.8rem;
+  }
+
+  .contoh .biografi-link {
+    margin-top: 0.5rem;
+  }
+
+  .contoh .biografi-link a {
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+  /* contoh end */
+  /* materi page end */
+
+  /* biografi page start */
+  /* hero */
+  .hero-biografi {
+    min-height: 75vh;
+    background-size: 100% 35%;
+  }
+
+  .hero-biografi .wrapper .img {
+    max-width: 15rem;
+    min-width: 15rem;
+    margin-top: 1rem;
+  }
+
+  .hero-biografi .wrapper .title {
+    margin-top: 1rem;
+  }
+
+  .hero-biografi .wrapper .title h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .hero-biografi .wrapper .title h2 {
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-biografi .wrapper .title h2::after {
+    content: "";
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: solid 2px var(--primary-color);
+    transform: scaleX(0.8);
+  }
+
+  .hero-biografi .wrapper .title p {
+    font-size: 1rem;
+    font-family: var(--montserrat-font);
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  /* hero */
+
+  /* story start */
+  .story {
+    padding-top: 0rem;
+  }
+
+  .story .container p {
+    font-size: 0.8rem;
+  }
+  /* story end */
+
+  /* rangkuman start */
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content .picture {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0.8rem;
+  }
+
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-date {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .rangkuman .pendiidikan .list-rangkum li .card-body .card-content .info h3 {
+    font-size: 1 rem;
+  }
+
+  .rangkuman .list-kerja li {
+    width: 100%;
+  }
+
+  .rangkuman .list-kerja h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rangkuman .list-kerja h3 {
+    font-size: 1rem;
+  }
+  /* rangkuman end */
+  /* biografi page end */
+
+  .footer {
+    display: flex;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer .footer-content .footer-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer .footer-content .footer-link li {
+    color: #fff;
+    margin: 10px 0px;
+  }
+
+  .footer .footer-content .footer-link a {
+    font-size: 0.8rem;
+  }
+
+  .footer .footer-content p {
+    padding-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer .footer-end li {
+    margin-top: 0;
+    margin: 10px 0px;
+    font-size: 0.7rem;
+  }
+}
