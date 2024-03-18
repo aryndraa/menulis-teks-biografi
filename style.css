@@ -1448,12 +1448,12 @@ body:not(.footer) {
     display: none;
   }
 
-  .sidebar
-    .content-side
-    .side-link
-    li
-    a:not(.sidebar .content-side .side-link li a.link-icon) {
+  .sidebar .content-side .side-link li a {
     display: none;
+  }
+
+  .sidebar .content-side .side-link li a.link-icon {
+    display: flex;
   }
 
   .sidebar .content-side .side-link li {
@@ -2025,7 +2025,7 @@ body:not(.footer) {
   }
 
   .rangkuman .pendiidikan .list-rangkum li .card-body .card-content .info h3 {
-    font-size: 1 rem;
+    font-size: 0.8rem;
   }
 
   .rangkuman .list-kerja li {
